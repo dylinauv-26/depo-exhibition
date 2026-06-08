@@ -1,0 +1,41 @@
+body {
+  font-family: var(--font-manrope);
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter-mobile);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-inline: var(--gutter-tablet);
+  }
+}
+
+@media (min-width: 1440px) {
+  .container {
+    padding-inline: var(--gutter);
+  }
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page__main {
+  flex: 1 0 auto;
+}
+
+body.is-menu-locked {
+  overflow: hidden;
+}

@@ -1,0 +1,252 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--color-bg);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: var(--header-height);
+  padding-block: 16px;
+}
+
+.header__logo {
+  flex-shrink: 0;
+}
+
+.header__logo-link {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.header__logo-letters {
+  display: flex;
+  align-items: flex-end;
+  height: 42px;
+}
+
+.header__logo-letter {
+  height: 40px;
+  width: auto;
+  flex-shrink: 0;
+}
+
+.header__logo-letter--p1 {
+  width: 19px;
+}
+
+.header__logo-letter--p2 {
+  width: 23px;
+}
+
+.header__logo-letter--d {
+  width: 14px;
+}
+
+.header__logo-letter--o {
+  width: 33px;
+  height: 42px;
+  transform: rotate(3.5deg);
+  transform-origin: center bottom;
+}
+
+.header__logo-tagline {
+  font-family: var(--font-pt-sans);
+  font-size: 7px;
+  line-height: 0.89;
+  letter-spacing: 0.74px;
+  text-transform: lowercase;
+  color: var(--color-text);
+}
+
+.header__nav-wrap {
+  display: none;
+  align-items: center;
+  gap: 24px;
+  margin-left: auto;
+}
+
+.header__menu-list {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header__menu-link {
+  font-size: 18px;
+  line-height: 1.1;
+  text-align: center;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+  transition:
+    color var(--transition),
+    text-decoration-color var(--transition);
+}
+
+.header__menu-link:hover,
+.header__menu-link:focus-visible {
+  text-decoration-color: currentColor;
+}
+
+.header__menu-link.is-active {
+  color: var(--color-accent);
+  text-decoration-color: currentColor;
+}
+
+.header__ticket {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.header__ticket--desktop {
+  display: none;
+}
+
+.header__ticket-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transform: rotate(-90deg);
+}
+
+.header__ticket-link {
+  font-size: 18px;
+  line-height: 1.1;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  white-space: nowrap;
+  transition: color var(--transition);
+}
+
+.header__ticket-link:hover,
+.header__ticket-link:focus-visible {
+  color: var(--color-accent);
+}
+
+.header__burger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.header__burger-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.header__burger-icon--close {
+  display: none;
+}
+
+.header.is-menu-open .header__burger-icon--open {
+  display: none;
+}
+
+.header.is-menu-open .header__burger-icon--close {
+  display: block;
+}
+
+.header__mobile-menu {
+  display: none;
+  position: fixed;
+  inset: var(--header-height) 0 0;
+  z-index: 99;
+  padding: 24px var(--gutter-mobile);
+  background-color: var(--color-bg);
+  overflow-y: auto;
+}
+
+.header.is-menu-open .header__mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header__mobile-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  width: 100%;
+  text-align: center;
+}
+
+.header__mobile-list li {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.header__mobile-link {
+  font-size: 18px;
+  line-height: 1.1;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+  transition:
+    color var(--transition),
+    text-decoration-color var(--transition);
+}
+
+.header__mobile-link:hover,
+.header__mobile-link:focus-visible {
+  text-decoration-color: currentColor;
+}
+
+.header__mobile-link.is-active {
+  color: var(--color-accent);
+  text-decoration-color: currentColor;
+}
+
+.header__mobile-ticket {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 4px;
+  font-size: 18px;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+@media (min-width: 768px) {
+  .header__nav-wrap {
+    display: flex;
+  }
+
+  .header__burger {
+    display: none;
+  }
+
+  .header__ticket--desktop {
+    display: flex;
+  }
+
+  .header__mobile-menu {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1440px) {
+  .header__nav-wrap {
+    gap: 159px;
+  }
+
+  .header__menu-list {
+    gap: 28px;
+  }
+}
