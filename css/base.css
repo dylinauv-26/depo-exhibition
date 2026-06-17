@@ -39,3 +39,12 @@ body {
 body.is-menu-locked {
   overflow: hidden;
 }
+
+.layout-error {
+  padding: 16px var(--gutter-mobile);
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--color-accent);
+  background: rgba(227, 213, 183, 0.08);
+  border-bottom: 1px solid var(--color-border);
+}

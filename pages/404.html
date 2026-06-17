@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
+    <meta name="description" content="Страница не найдена — ДЕПО." />
     <title>404 — страница не найдена | ДЕПО</title>
     <link rel="stylesheet" href="../css/shared/reset.css" />
     <link rel="stylesheet" href="../css/shared/variables.css" />
@@ -11,20 +12,45 @@
     <link rel="stylesheet" href="../css/base.css" />
     <link rel="stylesheet" href="../css/components/header.css" />
     <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/pages/404.css" />
   </head>
-  <body class="page" data-page="">
+  <body class="page" data-page="404">
     <div id="site-header"></div>
 
     <main class="page__main">
-      <section class="container" style="padding-block: 120px; text-align: center">
-        <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 16px">404</h1>
-        <p style="opacity: 0.5">Страница не найдена</p>
-        <p style="margin-top: 24px"><a href="../index.html">На главную</a></p>
+      <section class="not-found" aria-labelledby="not-found-title">
+        <div class="container">
+          <div class="not-found__inner">
+            <div class="not-found__code" aria-hidden="true">
+              <span class="not-found__digit">4</span>
+              <div
+                class="not-found__zero"
+                data-zero="../assets/images/404/zero.svg"
+              ></div>
+              <span class="not-found__digit">4</span>
+            </div>
+
+            <div class="not-found__content">
+              <h1 class="not-found__title" id="not-found-title">Страница не найдена</h1>
+
+              <p class="not-found__desc">
+                <span class="not-found__desc-line">
+                  Страница, на которую вы пытаетесь попасть, не существует или была удалена.
+                </span>
+                <span class="not-found__desc-line">
+                  Перейдите на
+                  <a class="not-found__link" href="../index.html" data-link="index.html">Главную страницу.</a>
+                </span>
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <div id="site-footer"></div>
 
     <script type="module" src="../js/layout.js"></script>
+    <script src="../js/pages/404.js" defer></script>
   </body>
 </html>

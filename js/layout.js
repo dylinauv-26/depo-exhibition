@@ -11,6 +11,10 @@ const resolveBasePath = () => {
   return window.location.pathname.includes('/pages/') ? '../' : './';
 };
 
+const resolveComponentUrl = (fileName) => {
+  return new URL(`../html-components/${fileName}`, import.meta.url).href;
+};
+
 const applyLinks = (root, basePath) => {
   root.querySelectorAll('[data-link]').forEach((element) => {
     const linkPath = element.getAttribute('data-link');
@@ -23,6 +27,19 @@ const applyLinks = (root, basePath) => {
   });
 };
 
+const showLayoutError = (headerHost, footerHost) => {
+  const message =
+    'Header и footer не загрузились. Откройте сайт через локальный сервер: npx serve .';
+
+  if (headerHost) {
+    headerHost.innerHTML = `<p class="layout-error">${message}</p>`;
+  }
+
+  if (footerHost) {
+    footerHost.innerHTML = '';
+  }
+};
+
 const initLayout = async () => {
   const basePath = resolveBasePath();
   const headerHost = document.getElementById('site-header');
@@ -32,10 +49,15 @@ const initLayout = async () => {
     return;
   }
 
+  if (window.location.protocol === 'file:') {
+    showLayoutError(headerHost, footerHost);
+    return;
+  }
+
   try {
     const [headerResponse, footerResponse] = await Promise.all([
-      fetch(`${basePath}components/header.html`),
-      fetch(`${basePath}components/footer.html`),
+      fetch(resolveComponentUrl('header.html')),
+      fetch(resolveComponentUrl('footer.html')),
     ]);
 
     if (!headerResponse.ok || !footerResponse.ok) {
@@ -57,6 +79,7 @@ const initLayout = async () => {
     initFooter();
   } catch (error) {
     console.error(error);
+    showLayoutError(headerHost, footerHost);
   }
 };
 
