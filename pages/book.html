@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Книга выставки ДЕПО — исследуйте пространство и познакомьтесь с его атмосферой." />
     <title>Книга — ДЕПО</title>
     <link rel="stylesheet" href="../css/shared/reset.css" />
     <link rel="stylesheet" href="../css/shared/variables.css" />
@@ -10,19 +11,180 @@
     <link rel="stylesheet" href="../css/base.css" />
     <link rel="stylesheet" href="../css/components/header.css" />
     <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/pages/book.css" />
   </head>
   <body class="page" data-page="book">
     <div id="site-header"></div>
 
     <main class="page__main">
-      <section class="container" style="padding-block: 120px; text-align: center">
-        <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 16px">Книга</h1>
-        <p style="opacity: 0.5">Раздел в разработке</p>
+      <section class="book" aria-labelledby="book-title">
+        <div class="container">
+          <div class="book__content">
+            <div class="book__intro">
+              <h1 class="book__title" id="book-title">Книга</h1>
+              <p class="book__subtitle">
+                Исследуйте пространство<br />
+                и познакомьтесь с его атмосферой
+              </p>
+              <a class="book__read" href="#book-viewer">
+                <svg class="book__read-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                  <mask id="book-read-mask" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                    <rect x="0.5" y="0.5" width="19" height="19" fill="#BD0F0F" stroke="#151515" />
+                  </mask>
+                  <g mask="url(#book-read-mask)">
+                    <path
+                      d="M15.5 5.3125L9.96191 5.3125L9.96191 13.666L10.8096 12.8418L13.7461 9.99121L14.3359 10.5703C14.2893 10.6183 14.2383 10.6705 14.1836 10.7266C13.8724 11.0455 13.4359 11.4903 12.9365 11.9932C11.9364 13.0003 10.688 14.2349 9.68066 15.1602C9.63101 15.2058 9.57396 15.2582 9.5166 15.3105L4.71289 10.5625L5.29297 9.99316L8.26465 12.9131L9.11523 13.7471L9.11523 4.5L15.5 4.5L15.5 5.3125Z"
+                      fill="#E0E0E0"
+                      stroke="#E0E0E0"
+                    />
+                  </g>
+                </svg>
+                Читать
+              </a>
+            </div>
+
+            <div class="book__viewer" id="book-viewer">
+              <img
+                class="book__spread"
+                src="../assets/images/book/spread-main.jpg"
+                alt="Разворот книги: Экстерьер здания"
+                width="648"
+                height="435"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="book__gallery">
+          <div class="book__track" role="list">
+            <button
+              class="book__thumb"
+              type="button"
+              role="listitem"
+              data-src="../assets/images/book/preview-01.jpg"
+              data-alt="Разворот книги: Билетная будка"
+              aria-label="Показать разворот: Билетная будка"
+            >
+              <img src="../assets/images/book/preview-01.jpg" alt="" width="260" height="177" />
+            </button>
+            <button
+              class="book__thumb"
+              type="button"
+              role="listitem"
+              data-src="../assets/images/book/preview-02.jpg"
+              data-alt="Разворот книги"
+              aria-label="Показать разворот 2"
+            >
+              <img src="../assets/images/book/preview-02.jpg" alt="" width="260" height="177" />
+            </button>
+            <button
+              class="book__thumb"
+              type="button"
+              role="listitem"
+              data-src="../assets/images/book/preview-03.jpg"
+              data-alt="Разворот книги: Зал ожидания"
+              aria-label="Показать разворот: Зал ожидания"
+            >
+              <img src="../assets/images/book/preview-03.jpg" alt="" width="260" height="177" />
+            </button>
+            <button
+              class="book__thumb"
+              type="button"
+              role="listitem"
+              data-src="../assets/images/book/preview-04.jpg"
+              data-alt="Разворот книги"
+              aria-label="Показать разворот 4"
+            >
+              <img src="../assets/images/book/preview-04.jpg" alt="" width="260" height="177" />
+            </button>
+            <button
+              class="book__thumb"
+              type="button"
+              role="listitem"
+              data-src="../assets/images/book/preview-05.jpg"
+              data-alt="Разворот книги"
+              aria-label="Показать разворот 5"
+            >
+              <img src="../assets/images/book/preview-05.jpg" alt="" width="260" height="177" />
+            </button>
+            <button
+              class="book__thumb"
+              type="button"
+              role="listitem"
+              data-src="../assets/images/book/preview-06.jpg"
+              data-alt="Разворот книги"
+              aria-label="Показать разворот 6"
+            >
+              <img src="../assets/images/book/preview-06.jpg" alt="" width="260" height="177" />
+            </button>
+            <button
+              class="book__thumb"
+              type="button"
+              role="listitem"
+              data-src="../assets/images/book/preview-07.jpg"
+              data-alt="Разворот книги"
+              aria-label="Показать разворот 7"
+            >
+              <img src="../assets/images/book/preview-07.jpg" alt="" width="260" height="177" />
+            </button>
+            <button
+              class="book__thumb"
+              type="button"
+              role="listitem"
+              data-src="../assets/images/book/preview-08.jpg"
+              data-alt="Разворот книги"
+              aria-label="Показать разворот 8"
+            >
+              <img src="../assets/images/book/preview-08.jpg" alt="" width="260" height="177" />
+            </button>
+            <button
+              class="book__thumb"
+              type="button"
+              role="listitem"
+              data-src="../assets/images/book/preview-09.jpg"
+              data-alt="Разворот книги"
+              aria-label="Показать разворот 9"
+            >
+              <img src="../assets/images/book/preview-09.jpg" alt="" width="260" height="177" />
+            </button>
+            <button
+              class="book__thumb"
+              type="button"
+              role="listitem"
+              data-src="../assets/images/book/preview-10.jpg"
+              data-alt="Разворот книги"
+              aria-label="Показать разворот 10"
+            >
+              <img src="../assets/images/book/preview-10.jpg" alt="" width="260" height="177" />
+            </button>
+            <button
+              class="book__thumb"
+              type="button"
+              role="listitem"
+              data-src="../assets/images/book/preview-11.jpg"
+              data-alt="Разворот книги"
+              aria-label="Показать разворот 11"
+            >
+              <img src="../assets/images/book/preview-11.jpg" alt="" width="260" height="177" />
+            </button>
+            <button
+              class="book__thumb"
+              type="button"
+              role="listitem"
+              data-src="../assets/images/book/preview-12.jpg"
+              data-alt="Разворот книги"
+              aria-label="Показать разворот 12"
+            >
+              <img src="../assets/images/book/preview-12.jpg" alt="" width="260" height="177" />
+            </button>
+          </div>
+        </div>
       </section>
     </main>
 
     <div id="site-footer"></div>
 
     <script type="module" src="../js/layout.js"></script>
+    <script src="../js/pages/book.js" defer></script>
   </body>
 </html>

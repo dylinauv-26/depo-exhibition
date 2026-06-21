@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Сувенирная продукция выставки ДЕПО — магазин." />
     <title>Магазин — ДЕПО</title>
     <link rel="stylesheet" href="../css/shared/reset.css" />
     <link rel="stylesheet" href="../css/shared/variables.css" />
@@ -10,19 +11,147 @@
     <link rel="stylesheet" href="../css/base.css" />
     <link rel="stylesheet" href="../css/components/header.css" />
     <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/pages/shop.css" />
   </head>
   <body class="page" data-page="shop">
     <div id="site-header"></div>
 
     <main class="page__main">
-      <section class="container" style="padding-block: 120px; text-align: center">
-        <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 16px">Магазин</h1>
-        <p style="opacity: 0.5">Раздел в разработке</p>
+      <section class="shop" aria-labelledby="shop-title">
+        <div class="container">
+          <div class="shop__intro">
+            <p class="shop__subtitle">
+              Сувенирная продукция для вас<br />
+              и ваших близких
+            </p>
+            <h1 class="shop__title" id="shop-title">Магазин</h1>
+          </div>
+        </div>
+
+        <div class="shop__carousel">
+          <div class="shop__track" role="list">
+            <article class="shop-card shop-card--circle" role="listitem">
+              <div class="shop-card__media">
+                <img src="../assets/images/shop/suitcase.jpg" alt="Чемодан" width="342" height="450" />
+                <button class="shop-card__cart" type="button" aria-label="Оформить заказ: Чемодан"></button>
+              </div>
+              <div class="shop-card__meta">
+                <h2 class="shop-card__name">Чемодан</h2>
+                <p class="shop-card__price">5 600 ₽</p>
+              </div>
+            </article>
+
+            <article class="shop-card shop-card--rect shop-card--narrow shop-card--rect-m" role="listitem">
+              <div class="shop-card__media shop-card__media--mugs">
+                <img src="../assets/images/shop/mugs.jpg" alt="Набор кружек" width="312" height="290" />
+                <button class="shop-card__cart" type="button" aria-label="Оформить заказ: Набор кружек"></button>
+              </div>
+              <div class="shop-card__meta">
+                <h2 class="shop-card__name">Набор кружек</h2>
+                <p class="shop-card__price">1 890 ₽</p>
+              </div>
+            </article>
+
+            <article class="shop-card shop-card--rect shop-card--narrow shop-card--rect-l" role="listitem">
+              <div class="shop-card__media shop-card__media--notebook">
+                <img src="../assets/images/shop/notebook.jpg" alt="Блокнот" width="312" height="436" />
+                <button class="shop-card__cart" type="button" aria-label="Оформить заказ: Блокнот"></button>
+              </div>
+              <div class="shop-card__meta">
+                <h2 class="shop-card__name">Блокнот</h2>
+                <p class="shop-card__price">560 ₽</p>
+              </div>
+            </article>
+
+            <article class="shop-card shop-card--pill shop-card--wide" role="listitem">
+              <div class="shop-card__media">
+                <img src="../assets/images/shop/certificate.jpg" alt="Сертификат" width="537" height="328" />
+                <button class="shop-card__cart" type="button" aria-label="Оформить заказ: Сертификат"></button>
+              </div>
+              <div class="shop-card__meta">
+                <h2 class="shop-card__name">Сертификат</h2>
+                <p class="shop-card__price">от 1 000 ₽</p>
+              </div>
+            </article>
+
+            <article class="shop-card shop-card--rect shop-card--rect-xl" role="listitem">
+              <div class="shop-card__media">
+                <img src="../assets/images/shop/player.jpg" alt="MP3-плеер" width="342" height="450" />
+                <button class="shop-card__cart" type="button" aria-label="Оформить заказ: MP3-плеер"></button>
+              </div>
+              <div class="shop-card__meta">
+                <h2 class="shop-card__name">MP3-плеер</h2>
+                <p class="shop-card__price">3 900 ₽</p>
+              </div>
+            </article>
+
+            <article class="shop-card shop-card--rect shop-card--rect-s" role="listitem">
+              <div class="shop-card__media">
+                <img src="../assets/images/shop/badge.jpg" alt="Значок" width="342" height="290" />
+                <button class="shop-card__cart" type="button" aria-label="Оформить заказ: Значок"></button>
+              </div>
+              <div class="shop-card__meta">
+                <h2 class="shop-card__name">Значок</h2>
+                <p class="shop-card__price">290 ₽</p>
+              </div>
+            </article>
+          </div>
+        </div>
       </section>
     </main>
 
     <div id="site-footer"></div>
 
+    <div class="shop-modal" id="shop-order-modal" hidden>
+      <div class="shop-modal__overlay" data-close aria-hidden="true"></div>
+      <div class="shop-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="shop-order-title">
+        <button class="shop-modal__close" type="button" aria-label="Закрыть">×</button>
+        <h2 class="shop-modal__title" id="shop-order-title">Оформление заказа</h2>
+        <p class="shop-modal__product" data-order-product></p>
+
+        <form class="shop-modal__form">
+          <label class="shop-modal__field">
+            <span class="shop-modal__label">Имя</span>
+            <input
+              class="shop-modal__input"
+              type="text"
+              name="name"
+              autocomplete="name"
+              placeholder="Ваше имя"
+              required
+            />
+          </label>
+
+          <label class="shop-modal__field">
+            <span class="shop-modal__label">Телефон</span>
+            <input
+              class="shop-modal__input"
+              type="tel"
+              name="phone"
+              autocomplete="tel"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </label>
+
+          <label class="shop-modal__field">
+            <span class="shop-modal__label">Email</span>
+            <input
+              class="shop-modal__input"
+              type="email"
+              name="email"
+              autocomplete="email"
+              placeholder="example@mail.ru"
+              required
+            />
+          </label>
+
+          <button class="shop-modal__submit" type="submit">Отправить заказ</button>
+        </form>
+      </div>
+    </div>
+
     <script type="module" src="../js/layout.js"></script>
+    <script src="../js/pages/shop.js" defer></script>
   </body>
 </html>
