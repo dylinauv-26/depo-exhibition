@@ -1,0 +1,451 @@
+/* ─── Hero ─────────────────────────────────────────────── */
+
+.home-hero {
+  overflow: hidden;
+  padding-bottom: 48px;
+}
+
+.home-hero__oval {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-inline: auto;
+  max-width: 1320px;
+  padding: 40px 24px 0;
+  background: var(--color-accent);
+  border-radius: 200px / 100px;
+  box-shadow:
+    inset 10px 10px 20px rgba(0, 0, 0, 0.18),
+    inset -10px -10px 20px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+}
+
+.home-hero__text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  color: #1a1a1a;
+  padding: 0 16px;
+  max-width: 720px;
+  width: 100%;
+}
+
+.home-hero__caption {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.home-hero__title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+}
+
+.home-hero__desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  max-width: 420px;
+}
+
+/* TV area */
+.home-hero__tv-area {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 24px;
+}
+
+.home-hero__tv-widget {
+  position: relative;
+  width: 280px;
+  flex-shrink: 0;
+  padding: 0;
+  transform: rotate(5.42deg);
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.home-hero__tv-widget:hover {
+  opacity: 0.95;
+}
+
+.home-hero__screen {
+  position: absolute;
+  /* approximate screen area within TV PNG */
+  top: 18%;
+  left: 16%;
+  width: 65%;
+  height: 48%;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.home-hero__slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.home-hero__slide.is-active {
+  opacity: 1;
+}
+
+.home-hero__tv-frame {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  pointer-events: none;
+}
+
+/* "Переключи" label */
+.home-hero__switch {
+  position: absolute;
+  right: 4%;
+  top: 42%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  transform: rotate(0.71deg);
+}
+
+.home-hero__switch-label {
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  line-height: 1;
+  color: #656565;
+  white-space: nowrap;
+}
+
+.home-hero__switch-arrow {
+  width: 36px;
+  height: auto;
+}
+
+/* ─── Features ──────────────────────────────────────────── */
+
+.home-features {
+  position: relative;
+  padding-block: 48px;
+}
+
+.home-features__grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.home-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  max-width: 260px;
+  text-align: center;
+}
+
+.home-feature__icon {
+  display: block;
+  max-width: 155px;
+  height: auto;
+  object-fit: contain;
+}
+
+.home-feature__text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.home-feature__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.12;
+  color: var(--color-text);
+}
+
+.home-feature__desc {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--color-text);
+}
+
+/* connecting lines — desktop only */
+.home-features__line {
+  display: none;
+}
+
+/* ─── Afisha preview ────────────────────────────────────── */
+
+.home-afisha {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-inline: var(--gutter-mobile);
+  padding-bottom: 32px;
+}
+
+.home-afisha__card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 20px;
+  min-height: 240px;
+  transition: opacity var(--transition);
+}
+
+.home-afisha__card:hover {
+  opacity: 0.92;
+}
+
+.home-afisha__card--red {
+  background-color: #ad4b49;
+}
+
+.home-afisha__card--blue {
+  background-color: #7aabc4;
+}
+
+.home-afisha__info {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px;
+}
+
+.home-afisha__date {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 0.56px;
+  text-transform: uppercase;
+  color: rgba(224, 224, 224, 0.7);
+}
+
+.home-afisha__card--blue .home-afisha__date {
+  color: rgba(26, 26, 26, 0.6);
+}
+
+.home-afisha__name {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.12;
+  color: var(--color-text);
+}
+
+.home-afisha__card--blue .home-afisha__name {
+  color: #1a1a1a;
+}
+
+.home-afisha__decor {
+  position: absolute;
+  left: 50%;
+  bottom: -10%;
+  z-index: 0;
+  width: min(88%, 520px);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+/* ─── Tablet 768px ──────────────────────────────────────── */
+
+@media (min-width: 768px) {
+  .home-hero__oval {
+    padding: 60px 40px 0;
+    border-radius: 400px / 200px;
+  }
+
+  .home-hero__title {
+    font-size: 56px;
+    letter-spacing: 2.24px;
+  }
+
+  .home-hero__caption {
+    font-size: 16px;
+  }
+
+  .home-hero__desc {
+    font-size: 18px;
+  }
+
+  .home-hero__tv-widget {
+    width: 420px;
+  }
+
+  .home-hero__switch-label {
+    font-size: 24px;
+  }
+
+  .home-features__grid {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .home-feature {
+    flex: 1;
+    max-width: 260px;
+  }
+
+  .home-feature--center {
+    margin-top: 80px;
+  }
+
+  .home-afisha {
+    flex-direction: row;
+    padding-inline: var(--gutter-tablet);
+    align-items: flex-end;
+    gap: 16px;
+  }
+
+  .home-afisha__card {
+    flex: 1;
+    min-height: 300px;
+  }
+}
+
+/* ─── Desktop 1440px ────────────────────────────────────── */
+
+@media (min-width: 1440px) {
+  .home-hero {
+    padding-bottom: 80px;
+  }
+
+  .home-hero__oval {
+    padding: 80px 60px 0;
+    border-radius: 630px;
+    box-shadow:
+      inset 15px 15px 25px rgba(0, 0, 0, 0.25),
+      inset -15px -15px 25px rgba(0, 0, 0, 0.25);
+  }
+
+  .home-hero__title {
+    font-size: 94px;
+    letter-spacing: 3.76px;
+  }
+
+  .home-hero__caption {
+    font-size: 20px;
+  }
+
+  .home-hero__desc {
+    font-size: 20px;
+    max-width: 518px;
+  }
+
+  .home-hero__tv-widget {
+    width: 550px;
+  }
+
+  .home-hero__switch {
+    right: 8%;
+    top: 48%;
+  }
+
+  .home-hero__switch-label {
+    font-size: 28px;
+  }
+
+  .home-hero__switch-arrow {
+    width: 40px;
+  }
+
+  .home-features {
+    padding-block: 80px;
+  }
+
+  .home-features__grid {
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0;
+  }
+
+  .home-feature {
+    max-width: 256px;
+  }
+
+  .home-feature--center {
+    margin-top: 120px;
+    align-self: flex-start;
+  }
+
+  .home-features__line {
+    display: block;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  .home-features__line--left {
+    left: calc(8.33% + 60px);
+    top: 50%;
+    width: 353px;
+  }
+
+  .home-features__line--right {
+    left: calc(58.33%);
+    top: 52%;
+    width: 339px;
+  }
+
+  .home-afisha {
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 0;
+    gap: 0;
+    padding-bottom: 0;
+  }
+
+  .home-afisha__card {
+    width: 1200px;
+    max-width: calc(100% - 120px);
+    min-height: 592px;
+    margin-inline: auto;
+  }
+
+  .home-afisha__card--blue {
+    width: 1320px;
+    max-width: 100%;
+    min-height: 700px;
+    margin-top: -60px;
+  }
+
+  .home-afisha__info {
+    padding: 32px;
+    gap: 8px;
+  }
+
+  .home-afisha__date {
+    font-size: 16px;
+    letter-spacing: 0.64px;
+  }
+
+  .home-afisha__name {
+    font-size: 24px;
+  }
+}

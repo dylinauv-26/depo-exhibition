@@ -1,0 +1,420 @@
+.page[data-page='afisha'] .page__main {
+  flex: 0 0 auto;
+}
+
+.afisha {
+  padding-block: 37px 32px;
+}
+
+.afisha__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.afisha__subtitle {
+  max-width: 292px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.afisha__title {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 1.44px;
+  text-transform: uppercase;
+}
+
+.afisha__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.afisha__row {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.afisha-card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  max-width: 648px;
+  padding: 0;
+  text-align: left;
+  transition: opacity var(--transition);
+}
+
+.afisha-card:hover,
+.afisha-card:focus-visible {
+  opacity: 0.92;
+}
+
+.afisha-card__media {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.afisha-card__media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 310 / 465;
+  object-fit: cover;
+}
+
+.afisha-card--circle .afisha-card__media {
+  border-radius: 300px;
+}
+
+.afisha-card--rect .afisha-card__media {
+  border-radius: 20px;
+}
+
+.afisha-card--pill .afisha-card__media {
+  border-radius: 300px;
+}
+
+.afisha-card__meta,
+.afisha-card__featured-text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.afisha-card__date {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: 0.64px;
+  text-transform: uppercase;
+  color: #818181;
+}
+
+.afisha-card__name {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.12;
+  color: var(--color-text);
+}
+
+.afisha-card--featured {
+  gap: 0;
+  min-height: 420px;
+  overflow: hidden;
+  border-radius: 20px;
+  isolation: isolate;
+}
+
+.afisha-card__featured-body {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: inherit;
+  padding: 32px;
+  overflow: hidden;
+}
+
+.afisha-card--blue {
+  background-color: #7aabc4;
+}
+
+.afisha-card--blue .afisha-card__date,
+.afisha-card--blue .afisha-card__name {
+  color: #1a1a1a;
+}
+
+.afisha-card--red {
+  background-color: #ad4b49;
+}
+
+.afisha-card--red .afisha-card__date {
+  color: rgba(224, 224, 224, 0.7);
+}
+
+.afisha-card--red .afisha-card__name {
+  color: var(--color-text);
+}
+
+.afisha-card__featured-text {
+  position: relative;
+  z-index: 1;
+  max-width: 312px;
+}
+
+.afisha-card__decor {
+  position: absolute;
+  left: 50%;
+  bottom: -8%;
+  z-index: 0;
+  width: min(88%, 520px);
+  height: auto;
+  aspect-ratio: 1;
+  object-fit: contain;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.afisha-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.afisha-modal[hidden] {
+  display: none;
+}
+
+.afisha-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+
+.afisha-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 390px);
+  max-height: calc(100vh - 32px);
+  padding: 24px 20px 20px;
+  overflow-y: auto;
+  border-radius: 20px;
+  background-color: var(--color-bg);
+}
+
+.afisha-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  font-size: 24px;
+  line-height: 1;
+  color: var(--color-text-muted);
+  transition: color var(--transition);
+}
+
+.afisha-modal__close:hover,
+.afisha-modal__close:focus-visible {
+  color: var(--color-text);
+}
+
+.afisha-modal__title {
+  margin-bottom: 8px;
+  padding-right: 32px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.96px;
+  text-transform: uppercase;
+}
+
+.afisha-modal__event {
+  margin-bottom: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: #818181;
+}
+
+.afisha-modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.afisha-modal__field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.afisha-modal__label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.35;
+  color: var(--color-text-muted);
+}
+
+.afisha-modal__input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--color-text);
+}
+
+.afisha-modal__input::placeholder {
+  color: #818181;
+}
+
+.afisha-modal__submit {
+  margin-top: 8px;
+  padding: 14px 24px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--color-bg);
+  background-color: var(--color-accent);
+  transition: opacity var(--transition);
+}
+
+.afisha-modal__submit:hover,
+.afisha-modal__submit:focus-visible {
+  opacity: 0.9;
+}
+
+@media (min-width: 768px) {
+  .afisha {
+    padding-block: 50px 48px;
+  }
+
+  .afisha__intro {
+    max-width: 516px;
+    margin-bottom: 40px;
+    margin-left: max(0px, calc(25vw + 24px - var(--gutter-tablet)));
+    margin-right: max(0px, calc(36px - var(--gutter-tablet)));
+  }
+
+  .afisha__title {
+    font-size: 48px;
+    letter-spacing: 1.92px;
+  }
+
+  .afisha__grid {
+    gap: 40px;
+    max-width: 513px;
+    margin-left: max(0px, calc(25vw + 24px - var(--gutter-tablet)));
+    margin-right: max(0px, calc(36px - var(--gutter-tablet)));
+  }
+
+  .afisha__row {
+    gap: 40px;
+  }
+
+  .afisha-card {
+    max-width: none;
+  }
+
+  .afisha-card--featured {
+    min-height: 520px;
+  }
+
+  .afisha-modal__dialog {
+    width: min(100%, 480px);
+    padding: 32px 28px 28px;
+  }
+
+  .afisha-modal__title {
+    font-size: 32px;
+    letter-spacing: 1.28px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .afisha {
+    padding-block: 77px 64px;
+  }
+
+  .afisha__intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px;
+    align-items: start;
+    max-width: none;
+    margin-inline: 0;
+    margin-bottom: 48px;
+  }
+
+  .afisha__subtitle {
+    grid-column: 1;
+    max-width: 292px;
+    padding-top: 10px;
+  }
+
+  .afisha__title {
+    grid-column: 2;
+    justify-self: end;
+    font-size: 64px;
+    letter-spacing: 2.56px;
+  }
+
+  .afisha__grid {
+    gap: 48px;
+    max-width: none;
+    margin-inline: 0;
+  }
+
+  .afisha__row--top {
+    display: grid;
+    grid-template-columns: 310px minmax(0, 1fr) 648px;
+    column-gap: 24px;
+    align-items: start;
+  }
+
+  .afisha__row--top .afisha-card--circle {
+    width: 310px;
+    max-width: none;
+  }
+
+  .afisha__row--top .afisha-card--blue {
+    grid-column: 3;
+    width: 648px;
+    max-width: none;
+    min-height: 677px;
+  }
+
+  .afisha__row--middle {
+    display: grid;
+    grid-template-columns: 336px 312px minmax(0, 1fr) 312px;
+    align-items: start;
+  }
+
+  .afisha__row--middle .afisha-card--childhood {
+    grid-column: 2;
+    width: 312px;
+    max-width: none;
+  }
+
+  .afisha__row--middle .afisha-card--pill {
+    grid-column: 4;
+    width: 312px;
+    max-width: none;
+    margin-top: 120px;
+  }
+
+  .afisha__row--bottom {
+    display: grid;
+    grid-template-columns: 648px minmax(24px, 1fr) 312px;
+    align-items: start;
+  }
+
+  .afisha__row--bottom .afisha-card--red {
+    width: 648px;
+    max-width: none;
+    min-height: 677px;
+  }
+
+  .afisha__row--bottom .afisha-card--dreams {
+    grid-column: 3;
+    width: 312px;
+    max-width: none;
+    margin-top: 120px;
+  }
+}

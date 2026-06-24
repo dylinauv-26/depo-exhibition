@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Афиша выставки ДЕПО — предстоящие мероприятия и запись на участие." />
     <title>Афиша — ДЕПО</title>
     <link rel="stylesheet" href="../css/shared/reset.css" />
     <link rel="stylesheet" href="../css/shared/variables.css" />
@@ -10,19 +11,193 @@
     <link rel="stylesheet" href="../css/base.css" />
     <link rel="stylesheet" href="../css/components/header.css" />
     <link rel="stylesheet" href="../css/components/footer.css" />
+    <link rel="stylesheet" href="../css/pages/afisha.css" />
   </head>
   <body class="page" data-page="afisha">
     <div id="site-header"></div>
 
     <main class="page__main">
-      <section class="container" style="padding-block: 120px; text-align: center">
-        <h1 style="font-size: 48px; font-weight: 700; margin-bottom: 16px">Афиша</h1>
-        <p style="opacity: 0.5">Раздел в разработке</p>
+      <section class="afisha" aria-labelledby="afisha-title">
+        <div class="container">
+          <div class="afisha__intro">
+            <p class="afisha__subtitle">
+              Узнайте о предстоящих выставках<br />
+              и запишитесь на участие
+            </p>
+            <h1 class="afisha__title" id="afisha-title">Афиша</h1>
+          </div>
+
+          <div class="afisha__grid">
+            <div class="afisha__row afisha__row--top">
+            <button
+              class="afisha-card afisha-card--circle"
+              type="button"
+              data-event-title="За стеклом"
+              data-event-date="24 мая 17:00"
+              aria-label="За стеклом, 24 мая 17:00"
+            >
+              <span class="afisha-card__media">
+                <img src="../assets/images/afisha/event-glass.jpg" alt="" width="310" height="465" />
+              </span>
+              <span class="afisha-card__meta">
+                <time class="afisha-card__date" datetime="2025-05-24T17:00">24 мая 17:00</time>
+                <span class="afisha-card__name">За стеклом</span>
+              </span>
+            </button>
+
+            <button
+              class="afisha-card afisha-card--featured afisha-card--blue"
+              type="button"
+              data-event-title="Окунись в мир детства"
+              data-event-date="28 ноября 13:00"
+              aria-label="Окунись в мир детства, 28 ноября 13:00"
+            >
+              <span class="afisha-card__featured-body">
+                <span class="afisha-card__featured-text">
+                  <time class="afisha-card__date" datetime="2025-11-28T13:00">28 ноября 13:00</time>
+                  <span class="afisha-card__name">Окунись в мир детства</span>
+                </span>
+                <img
+                  class="afisha-card__decor"
+                  src="../assets/images/afisha/decor-blue.png"
+                  alt=""
+                  width="608"
+                  height="608"
+                />
+              </span>
+            </button>
+            </div>
+
+            <div class="afisha__row afisha__row--middle">
+            <button
+              class="afisha-card afisha-card--rect afisha-card--childhood"
+              type="button"
+              data-event-title="Детство в каждом"
+              data-event-date="24 мая 17:00"
+              aria-label="Детство в каждом, 24 мая 17:00"
+            >
+              <span class="afisha-card__media">
+                <img src="../assets/images/afisha/event-childhood.jpg" alt="" width="312" height="465" />
+              </span>
+              <span class="afisha-card__meta">
+                <time class="afisha-card__date" datetime="2025-05-24T17:00">24 мая 17:00</time>
+                <span class="afisha-card__name">Детство в каждом</span>
+              </span>
+            </button>
+
+            <button
+              class="afisha-card afisha-card--pill"
+              type="button"
+              data-event-title="Жди чуда"
+              data-event-date="8 января 16:00"
+              aria-label="Жди чуда, 8 января 16:00"
+            >
+              <span class="afisha-card__media">
+                <img src="../assets/images/afisha/event-miracle.jpg" alt="" width="312" height="465" />
+              </span>
+              <span class="afisha-card__meta">
+                <time class="afisha-card__date" datetime="2026-01-08T16:00">8 января 16:00</time>
+                <span class="afisha-card__name">Жди чуда</span>
+              </span>
+            </button>
+            </div>
+
+            <div class="afisha__row afisha__row--bottom">
+            <button
+              class="afisha-card afisha-card--featured afisha-card--red"
+              type="button"
+              data-event-title="Давай мечтать"
+              data-event-date="28 ноября 13:00"
+              aria-label="Давай мечтать, 28 ноября 13:00"
+            >
+              <span class="afisha-card__featured-body">
+                <span class="afisha-card__featured-text">
+                  <time class="afisha-card__date" datetime="2025-11-28T13:00">28 ноября 13:00</time>
+                  <span class="afisha-card__name">Давай мечтать</span>
+                </span>
+                <img
+                  class="afisha-card__decor"
+                  src="../assets/images/afisha/decor-red.png"
+                  alt=""
+                  width="608"
+                  height="608"
+                />
+              </span>
+            </button>
+
+            <button
+              class="afisha-card afisha-card--rect afisha-card--dreams"
+              type="button"
+              data-event-title="Мечты не исчезли"
+              data-event-date="17 октября 17:00"
+              aria-label="Мечты не исчезли, 17 октября 17:00"
+            >
+              <span class="afisha-card__media">
+                <img src="../assets/images/afisha/event-dreams.jpg" alt="" width="312" height="465" />
+              </span>
+              <span class="afisha-card__meta">
+                <time class="afisha-card__date" datetime="2025-10-17T17:00">17 октября 17:00</time>
+                <span class="afisha-card__name">Мечты не исчезли</span>
+              </span>
+            </button>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
 
     <div id="site-footer"></div>
 
+    <div class="afisha-modal" id="afisha-signup-modal" hidden>
+      <div class="afisha-modal__overlay" data-close aria-hidden="true"></div>
+      <div class="afisha-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="afisha-modal-title">
+        <button class="afisha-modal__close" type="button" aria-label="Закрыть">×</button>
+        <h2 class="afisha-modal__title" id="afisha-modal-title">Запись на участие</h2>
+        <p class="afisha-modal__event" data-event-info></p>
+
+        <form class="afisha-modal__form">
+          <label class="afisha-modal__field">
+            <span class="afisha-modal__label">Имя</span>
+            <input
+              class="afisha-modal__input"
+              type="text"
+              name="name"
+              autocomplete="name"
+              placeholder="Ваше имя"
+              required
+            />
+          </label>
+
+          <label class="afisha-modal__field">
+            <span class="afisha-modal__label">Телефон</span>
+            <input
+              class="afisha-modal__input"
+              type="tel"
+              name="phone"
+              autocomplete="tel"
+              placeholder="+7 (___) ___-__-__"
+              required
+            />
+          </label>
+
+          <label class="afisha-modal__field">
+            <span class="afisha-modal__label">Email</span>
+            <input
+              class="afisha-modal__input"
+              type="email"
+              name="email"
+              autocomplete="email"
+              placeholder="example@mail.ru"
+              required
+            />
+          </label>
+
+          <button class="afisha-modal__submit" type="submit">Отправить заявку</button>
+        </form>
+      </div>
+    </div>
+
     <script type="module" src="../js/layout.js"></script>
+    <script src="../js/pages/afisha.js" defer></script>
   </body>
 </html>

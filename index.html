@@ -3,21 +3,191 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Главная — ДЕПО</title>
+    <meta name="description" content="ДЕПО — выставка мира детских воспоминаний. 26 мая, Москва." />
+    <title>ДЕПО — Мир детских воспоминаний</title>
     <link rel="stylesheet" href="css/shared/reset.css" />
     <link rel="stylesheet" href="css/shared/variables.css" />
     <link rel="stylesheet" href="css/shared/fonts.css" />
     <link rel="stylesheet" href="css/base.css" />
     <link rel="stylesheet" href="css/components/header.css" />
     <link rel="stylesheet" href="css/components/footer.css" />
+    <link rel="stylesheet" href="css/pages/home.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet" />
   </head>
   <body class="page" data-page="home">
     <div id="site-header"></div>
 
-    <main class="page__main"></main>
+    <main class="page__main">
+
+      <!-- Hero -->
+      <section class="home-hero" aria-label="Главная">
+        <div class="home-hero__oval">
+          <div class="home-hero__text">
+            <p class="home-hero__caption">Выставка · 26 мая · Москва</p>
+            <h1 class="home-hero__title">Мир детских воспоминаний</h1>
+            <p class="home-hero__desc">
+              Погрузитесь в атмосферу детства — мира тёплых воспоминаний,
+              любимых игрушек и моментов, которые хочется пережить снова
+            </p>
+          </div>
+
+          <div class="home-hero__tv-area">
+            <button
+              class="home-hero__tv-widget"
+              type="button"
+              aria-label="Следующий слайд"
+            >
+              <div class="home-hero__screen">
+                <img
+                  class="home-hero__slide is-active"
+                  src="assets/images/home/slide-1.jpg"
+                  alt="Интерьер выставки"
+                />
+                <img
+                  class="home-hero__slide"
+                  src="assets/images/afisha/event-glass.jpg"
+                  alt="Интерьер выставки — За стеклом"
+                />
+                <img
+                  class="home-hero__slide"
+                  src="assets/images/afisha/event-childhood.jpg"
+                  alt="Интерьер выставки — Детство"
+                />
+              </div>
+              <img
+                class="home-hero__tv-frame"
+                src="assets/images/home/tv.png"
+                alt=""
+                aria-hidden="true"
+              />
+            </button>
+
+            <div class="home-hero__switch" aria-hidden="true">
+              <span class="home-hero__switch-label">Переключи</span>
+              <img
+                class="home-hero__switch-arrow"
+                src="assets/images/home/arrow.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="home-features" aria-label="Что вас ждёт">
+        <div class="container">
+          <div class="home-features__grid">
+            <div class="home-feature">
+              <img
+                class="home-feature__icon"
+                src="assets/images/home/icon-ticket.svg"
+                alt=""
+                width="140"
+                height="140"
+              />
+              <div class="home-feature__text">
+                <h3 class="home-feature__title">Билет</h3>
+                <p class="home-feature__desc">
+                  Доступ ко всем зонам<br />и экспонатам проекта
+                </p>
+              </div>
+            </div>
+
+            <div class="home-feature home-feature--center">
+              <img
+                class="home-feature__icon"
+                src="assets/images/home/icon-toys.svg"
+                alt=""
+                width="155"
+                height="106"
+              />
+              <div class="home-feature__text">
+                <h3 class="home-feature__title">Коллекция игрушек</h3>
+                <p class="home-feature__desc">
+                  Игрушки и предметы детства разных эпох
+                </p>
+              </div>
+            </div>
+
+            <div class="home-feature">
+              <img
+                class="home-feature__icon"
+                src="assets/images/home/icon-interactive.svg"
+                alt=""
+                width="102"
+                height="101"
+              />
+              <div class="home-feature__text">
+                <h3 class="home-feature__title">Интерактив</h3>
+                <p class="home-feature__desc">
+                  Экспонаты, с которыми можно взаимодействовать
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- decorative connecting lines (desktop only) -->
+          <img
+            class="home-features__line home-features__line--left"
+            src="assets/images/home/line-1.svg"
+            alt=""
+            aria-hidden="true"
+          />
+          <img
+            class="home-features__line home-features__line--right"
+            src="assets/images/home/line-2.svg"
+            alt=""
+            aria-hidden="true"
+          />
+        </div>
+      </section>
+
+      <!-- Afisha preview -->
+      <section class="home-afisha" aria-label="Ближайшие мероприятия">
+        <a
+          class="home-afisha__card home-afisha__card--red"
+          data-link="pages/afisha.html"
+          href="#"
+          aria-label="Давай мечтать, 28 ноября 13:00"
+        >
+          <div class="home-afisha__info">
+            <time class="home-afisha__date" datetime="2025-11-28T13:00">28 ноября 13:00</time>
+            <p class="home-afisha__name">Давай мечтать</p>
+          </div>
+          <img
+            class="home-afisha__decor"
+            src="assets/images/afisha/decor-red.png"
+            alt=""
+            aria-hidden="true"
+          />
+        </a>
+
+        <a
+          class="home-afisha__card home-afisha__card--blue"
+          data-link="pages/afisha.html"
+          href="#"
+          aria-label="Окунись в мир детства, 28 ноября 13:00"
+        >
+          <div class="home-afisha__info">
+            <time class="home-afisha__date" datetime="2025-11-28T13:00">28 ноября 13:00</time>
+            <p class="home-afisha__name">Окунись в мир детства</p>
+          </div>
+          <img
+            class="home-afisha__decor"
+            src="assets/images/afisha/decor-blue.png"
+            alt=""
+            aria-hidden="true"
+          />
+        </a>
+      </section>
+
+    </main>
 
     <div id="site-footer"></div>
 
     <script type="module" src="js/layout.js"></script>
+    <script src="js/pages/home.js" defer></script>
   </body>
 </html>
