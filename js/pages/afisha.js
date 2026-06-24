@@ -30,6 +30,7 @@ const initAfishaModal = () => {
   };
 
   document.querySelectorAll('.afisha-card').forEach((card) => {
+    if (card.hasAttribute('href')) return;
     card.addEventListener('click', () => handleOpen(card));
   });
 

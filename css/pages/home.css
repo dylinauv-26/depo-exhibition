@@ -55,9 +55,11 @@
 
 .tv-picture {
     position: absolute;
-    left: 74px;
-    top: 82px;
+    left: 10%;
+    top: 11.1%;
     z-index: -1;
+    width: 71.7%;
+    height: 60.5%;
     overflow: hidden;
 }
 
