@@ -73,9 +73,48 @@ const initShopModal = () => {
   });
 };
 
+const initShopAutoScroll = () => {
+  const track = document.querySelector('.shop__track');
+
+  if (!track) {
+    return;
+  }
+
+  let paused = false;
+  let lastTime = null;
+  const speed = 0.04;
+
+  const tick = (timestamp) => {
+    if (!paused) {
+      if (lastTime !== null) {
+        const delta = timestamp - lastTime;
+        track.scrollLeft += speed * delta;
+
+        if (track.scrollLeft >= track.scrollWidth - track.clientWidth) {
+          track.scrollLeft = 0;
+        }
+      }
+
+      lastTime = timestamp;
+    } else {
+      lastTime = null;
+    }
+
+    requestAnimationFrame(tick);
+  };
+
+  requestAnimationFrame(tick);
+
+  track.addEventListener('mouseenter', () => { paused = true; });
+  track.addEventListener('mouseleave', () => { paused = false; });
+  track.addEventListener('touchstart', () => { paused = true; }, { passive: true });
+  track.addEventListener('touchend', () => { paused = false; });
+};
+
 const initShopPage = () => {
   initShopCartButtons();
   initShopModal();
+  initShopAutoScroll();
 };
 
 if (document.readyState === 'loading') {

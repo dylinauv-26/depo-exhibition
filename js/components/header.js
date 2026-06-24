@@ -8,6 +8,13 @@ export const initHeader = () => {
   const burger = header.querySelector('.header__burger');
   const mobileMenu = header.querySelector('.header__mobile-menu');
   const pageName = document.body.dataset.page || '';
+  const handleScroll = () => {
+    header.classList.toggle('is-scrolled', window.scrollY > 0);
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+
   const menuLinks = header.querySelectorAll('[data-nav]');
 
   menuLinks.forEach((link) => {

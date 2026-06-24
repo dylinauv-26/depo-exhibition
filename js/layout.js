@@ -1,6 +1,22 @@
 import { initHeader } from './components/header.js';
 import { initFooter } from './components/footer.js';
 
+const loader = document.createElement('div');
+loader.id = 'page-loader';
+loader.innerHTML = '<div class="loader__ring"></div>';
+document.body.prepend(loader);
+
+const hideLoader = () => {
+  loader.classList.add('is-hidden');
+  loader.addEventListener('transitionend', () => loader.remove(), { once: true });
+};
+
+if (document.readyState === 'complete') {
+  hideLoader();
+} else {
+  window.addEventListener('load', hideLoader);
+}
+
 const resolveBasePath = () => {
   const htmlBase = document.documentElement.dataset.base;
 

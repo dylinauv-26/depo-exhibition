@@ -1,7 +1,3 @@
-.page[data-page='contacts'] .page__main {
-  flex: 0 0 auto;
-}
-
 .contacts {
   padding-block: 37px 50px;
 }

@@ -30,6 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  padding-top: var(--header-height);
 }
 
 .page__main {
@@ -38,6 +39,36 @@ body {
 
 body.is-menu-locked {
   overflow: hidden;
+}
+
+/* ── Page loader ──────────────────────────────────────────── */
+#page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-bg);
+  transition: opacity 0.5s ease;
+}
+
+#page-loader.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loader__ring {
+  width: 52px;
+  height: 52px;
+  border: 3px solid rgba(224, 224, 224, 0.12);
+  border-top-color: var(--color-accent);
+  border-radius: 50%;
+  animation: loader-spin 0.75s linear infinite;
+}
+
+@keyframes loader-spin {
+  to { transform: rotate(360deg); }
 }
 
 .layout-error {
