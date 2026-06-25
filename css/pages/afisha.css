@@ -34,7 +34,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-  align-items: start;
+  align-items: stretch;
 }
 
 .afisha-card {
@@ -289,10 +289,21 @@
   }
 
   .afisha__intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 24px;
+    align-items: center;
     margin-bottom: 40px;
   }
 
+  .afisha__subtitle {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
   .afisha__title {
+    grid-column: 2;
+    grid-row: 1;
     font-size: 48px;
     letter-spacing: 1.92px;
   }
@@ -339,17 +350,25 @@
   }
 
   .afisha__intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 24px;
+    align-items: center;
     margin-bottom: 48px;
   }
 
-  .afisha__title {
-    font-size: 64px;
-    letter-spacing: 2.56px;
-  }
-
   .afisha__subtitle {
+    grid-column: 1;
+    grid-row: 1;
     font-size: 16px;
     max-width: 320px;
+  }
+
+  .afisha__title {
+    grid-column: 2;
+    grid-row: 1;
+    font-size: 64px;
+    letter-spacing: 2.56px;
   }
 
   .afisha__grid {

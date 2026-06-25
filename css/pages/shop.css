@@ -295,14 +295,20 @@
   }
 
   .shop__intro {
-    width: 100%;
-    max-width: 516px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    max-width: none;
+    margin-inline: 0;
     margin-bottom: 40px;
-    margin-left: max(0px, calc(25vw + 24px - var(--gutter-tablet)));
-    margin-right: max(0px, calc(36px - var(--gutter-tablet)));
+  }
+
+  .shop__subtitle {
+    order: 1;
   }
 
   .shop__title {
+    order: 2;
     font-size: 48px;
     letter-spacing: 1.92px;
   }
