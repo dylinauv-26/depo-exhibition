@@ -373,7 +373,7 @@
 
   .afisha__grid {
     display: grid;
-    grid-template-columns: 310px 26px 312px 24px 312px 24px 312px;
+    grid-template-columns: 310px 26px 240px 0 312px 24px 312px;
     grid-template-rows: auto auto auto;
     row-gap: 0;
     align-items: start;
